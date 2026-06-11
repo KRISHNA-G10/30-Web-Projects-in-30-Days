@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Age Calculator</title>
+  </head>
+  <style>
+    * {
+      margin: 0%;
+      padding: 0%;
+      box-sizing: border-box;
+      font-family: "poppins", sans-serif;
+    }
+    body {
+      display: flex;
+      justify-content: center;
+      height: 100vh;
+      align-items: center;
+      background-color: #4b5694;
+    }
+    .container {
+      width: 600px;
+      height: 600px;
+      background-color: #111844;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-shadow: black 20px;
+    }
+    h1 {
+      color: antiquewhite;
+      position: relative;
+      bottom: 20px;
+    }
+    input {
+      font-size: 20px;
+      border-radius: 10px;
+      border: none;
+      padding-left: 20px;
+      padding-bottom: 20px;
+      padding-top: 20px;
+      padding-right: 100px;
+      margin: 10px;
+      outline-style: none;
+    }
+    button {
+      margin: 10px;
+      font-size: 25px;
+      padding: 15px 140px;
+      background-color: #1591dc;
+      color: aliceblue;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+    h2 {
+      color: aliceblue;
+      position: relative;
+      bottom: 0px;
+      top: 30px;
+    }
+    input[type="number"]::-webkit-outer-spin-button,
+    input[type="number"]::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h1>Age Calculator</h1>
+      <input type="number" id="day" placeholder="Enter the Date !" required />
+      <input
+        type="number"
+        id="month"
+        placeholder="Enter the Month !"
+        required
+      />
+      <input type="number" id="year" placeholder="Enter the Year !" required />
+      <button onclick="Age()">Submit</button>
+      <h2 id="result"></h2>
+    </div>
+  </body>
+
+  <script>
+    function Age() {
+      const day = Number(document.getElementById("day").value);
+      const month = Number(document.getElementById("month").value);
+      const year = Number(document.getElementById("year").value);
+
+      const today = new Date();
+
+      let age = today.getFullYear() - year;
+
+      if (
+        today.getMonth() + 1 < month ||
+        (today.getMonth() + 1 === month && today.getDate() < day)
+      ) {
+        age--;
+      }
+      console.log(age);
+      document.getElementById("result").textContent = "Your age is: " + age;
+    }
+  </script>
+</html>
