@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dark Theme</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=dark_mode"
+    />
+  </head>
+  <style>
+    * {
+      padding: 0px;
+      margin: 0px;
+      box-sizing: border-box;
+      font-family: sans-serif;
+    }
+    :root {
+      --bg: #ffffff;
+      --surface: #f5f5f5;
+      --text: #111827;
+      --primary: #2563eb;
+    }
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: var(--bg);
+    }
+    .container {
+      width: 500px;
+      height: 520px;
+      background-color: var(--surface);
+      text-align: center;
+      border-radius: 20px;
+    }
+    h1 {
+      color: var(--text);
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
+    p {
+      color: var(--text);
+      margin-bottom: 20px;
+      margin: 20px;
+      text-align: justify;
+      line-height: 1.5;
+    }
+    button {
+      font-size: 20px;
+      padding: 20px;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+      text-transform: capitalize;
+      color: white;
+      background-color: var(--primary);
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    .dark {
+      --bg: #000000;
+      --surface: #121212;
+      --text: #ffffff;
+      --primary: #60a5fa;
+    }
+    button:hover {
+      background-color: #1d4ed8;
+      transform: translateY(-2px);
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h1>Dark theme</h1>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+        aliquam reprehenderit maiores dolores explicabo quisquam consectetur
+        modi quia beatae cupiditate, neque inventore ab sunt alias repellendus
+        sapiente, facere illo iusto adipisci minus cumque. Perferendis non illum
+        voluptates eaque aspernatur provident nostrum voluptatibus quos dicta!
+        Nisi suscipit dolorum nobis sit! At, ea omnis? Autem dignissimos ratione
+        quibusdam esse odio rerum itaque in earum velit ipsam animi aut,
+        molestiae, a amet quam magnam modi. Totam, exercitationem nobis nesciunt
+        officia cumque eveniet minima debitis nemo rerum laudantium esse animi,
+        quos voluptatem rem accusamus, blanditiis harum veniam magni incidunt
+        impedit. Architecto eligendi libero mollitia.
+      </p>
+      <span><button id="light-mode">light mode</button></span>
+      <span><button id="dark-mode">dark mode</button></span>
+    </div>
+  </body>
+  <script>
+    let dark = document.getElementById("dark-mode");
+    let light = document.getElementById("light-mode");
+
+    dark.addEventListener("click", () => {
+      document.body.classList.add("dark");
+    });
+
+    light.addEventListener("click", () => {
+      document.body.classList.remove("dark");
+    });
+  </script>
+</html>
