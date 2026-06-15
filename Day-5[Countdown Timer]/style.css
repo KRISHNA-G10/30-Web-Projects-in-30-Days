@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bungee&family=Press+Start+2P&display=swap');
+*{
+    margin: 0%;padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #EAEFEF;
+}
+.container{
+    background-color: #BFC9D1;
+    border-radius: 12px;
+    width: 500px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+   
+}
+.container .tittle h1{
+    font-size: 40px;
+    color: #25343F;
+    font-family: 'poppins',sans-serif;
+}
+.inputs input{
+    font-size: 20px;
+    padding-left: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+     font-family: 'poppins',sans-serif;
+
+}
+.result h1{
+    position: relative;
+   font-family: "Bebas Neue", sans-serif;
+    margin: 20px;
+    font-size: 50px;
+    color: #25343F;
+    text-align: center;
+}
+button{
+    font-size: 30px;
+    padding: 20px 20px;
+    border-radius: 20px;
+    margin: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #FF9B51;
+    color: #EAEFEF;
+    text-transform: capitalize;
+    font-weight: 500;
+}
